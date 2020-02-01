@@ -4,17 +4,26 @@ import PropTypes from 'prop-types';
 
 const Container = styled.button`
   color: white;
-  border: solid 2px white;
+  border-right: solid 3px white;
+  border-bottom: solid 4px white;
   border-radius: 5px;
   background-color: #23c9ff;
   width: 200px;
   height: 38px;
   text-align: center;
+  margin: 20px;
 
   &:hover {
     transition: 0.3s;
-    background: white;
-    color: #23c9ff;
+    background: #002733;
+    color: white;
+    border-color: #23c9ff;
+  }
+
+  &:focus {
+    transition: 0.3s;
+    background: #002733;
+    color: white;
     border-color: #23c9ff;
   }
 `;

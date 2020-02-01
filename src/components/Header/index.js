@@ -1,55 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../Button';
+import Heading from '../Heading';
+import Subheading from '../Subheading';
 
 const Wrapper = styled.div`
   display: flex;
   margin: 0 auto;
   padding: 28px 36px 28px 36px;
-  width: 100%;
-  height: 500px;
+  width: 100vw;
+  min-height: 33vh;
   background-color: #f279f6;
-  // justify-content: space-evenly;
-  flex-wrap: wrap;
-  flex-direction: column;
-`
-
-const Heading = styled.h1`
-  width: 80%;
-  color: white;
-  font-family: 'Helvetica', sans-serif;
-  font-weight: bold;
-  font-size: 72px;
-`
-
-const Subheading = styled.h2`
-  width: 80%;
-  color: white;
-  font-family: 'Helvetica', sans-serif;
-  font-weight: bold;
-  font-size: 36px;
+  align-items: baseline;
+  flex-flow: column wrap;
 `
 
 const Buttons = styled.div`
   display: flex;
   width: 100%;
-  justify-content: flex-end;
-
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100px;
+  margin-left: -20px;
 `;
 
 const Header = () => {
 
   return (
       <Wrapper>
-        <Heading>
-          Hi! I'm Sebastian.
-        </Heading>
-        <Subheading>
-          I'm a UX-focused front-end developer based in Wellington, New Zealand.
-        </Subheading>
+        <Heading content="Hi! I'm Sebastian." />
+        <Subheading content="I'm a UX-focused front-end developer based in Wellington, New Zealand."/>
         <Buttons>
-          <Button content="Contact me"/>
           <Button content="About me"/>
+          <Button content="Contact me"/>
         </Buttons>
       </Wrapper>
   );

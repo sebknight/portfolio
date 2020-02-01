@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 } */
+
+body { 
+  background: #002733;
+  min-height: 100vh;
+  min-width: 100vw;
+  line-height: normal;
+}

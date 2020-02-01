@@ -1,0 +1,32 @@
+import PropTypes from 'prop-types';
+import React from 'react';
+import styled from 'styled-components';
+
+const Text = styled.h2`
+  color: white;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+
+  @media(min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media(min-width: 1200px) {
+    font-size: 36px;
+  }
+`
+
+const Subheading = props => {
+  const { content } = props;
+
+  return (  
+      <Text>{content}</Text>
+  );
+}
+
+Subheading.propTypes = {
+  content: PropTypes.string,
+}
+
+export default Subheading;
