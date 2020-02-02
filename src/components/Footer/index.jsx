@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import TextLink from '../TextLink';
 
 const Subtext = styled.p`
   font-size: 16px;
@@ -18,7 +19,17 @@ const Container = styled.div`
 
 const Footer = () => (
   <Container>
-    <Subtext>© Sebastian Maddox 2020. Built with React.</Subtext>
+    <Subtext>
+      © Sebastian Maddox 2020.
+      {' '}
+      <TextLink
+        href="https://github.com/sebknight/portfolio"
+        target="_blank"
+        rel="noopener"
+      >
+        View source on GitHub.
+      </TextLink>
+    </Subtext>
   </Container>
 
 );

@@ -53,18 +53,14 @@ const Card = (props) => {
       <ImageContainer>
         <Image height={height} src={src} width={width} />
       </ImageContainer>
-      <Paragraph content={content} />
+      <Paragraph>{content}</Paragraph>
     </Container>
   );
 };
 
 Card.propTypes = {
-  buttonContentA: PropTypes.string,
-  buttonContentB: PropTypes.string,
   content: PropTypes.string,
   height: PropTypes.string.isRequired,
-  linkA: PropTypes.string,
-  linkB: PropTypes.string,
   src: PropTypes.string.isRequired,
   title: PropTypes.string,
   width: PropTypes.string.isRequired,

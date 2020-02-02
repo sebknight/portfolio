@@ -1,7 +1,6 @@
 import React from 'react';
 import CardHolder from '../CardHolder';
 import Subheading from '../Subheading';
-import Column from '../Column';
 import Wrapper from '../Wrapper';
 
 const Work = () => {
@@ -15,7 +14,7 @@ const Work = () => {
       height: size,
       width: size,
       content: 'A React app for users to locate nearby mental health resources, and which provides information about mental health generally. \n\r I designed and researched this project, and built it in collaboration with Tashina Jacobs and Daniel Rhodes.',
-      title: 'Going through it?',
+      title: 'Going through it',
     },
     {
       id: 2, src: viszla, height: size, width: size, content: 'A digital ordering system.', title: 'Project 2',
@@ -31,7 +30,7 @@ const Work = () => {
 
   return (
     <Wrapper color="#002733">
-      <Subheading content="Projects" />
+      <Subheading>Projects</Subheading>
       <CardHolder cards={cards} />
     </Wrapper>
   );

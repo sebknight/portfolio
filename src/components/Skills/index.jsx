@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Column from '../Column';
 import List from '../List';
 import Subheading from '../Subheading';
 import Wrapper from '../Wrapper';
@@ -36,7 +35,7 @@ const Skills = () => {
   ];
   return (
     <Wrapper color="#002733">
-      <Subheading content="Skills" />
+      <Subheading>Skills</Subheading>
       <ListContainer>
         <List items={skills1} />
         <List items={skills2} />

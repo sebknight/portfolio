@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types';
-import React from 'react';
 import styled from 'styled-components';
 
-const Text = styled.h2`
+const Subheading = styled.h2`
   font-family: 'Noto Serif', serif;
   font-weight: bold;
   font-size: 28px;
@@ -16,20 +14,7 @@ const Text = styled.h2`
 
   @media(min-width: 1200px) {
     font-size: 48px;
-    margin-bottom: 60px;
   }
 `;
-
-const Subheading = (props) => {
-  const { content } = props;
-
-  return (
-    <Text>{content}</Text>
-  );
-};
-
-Subheading.propTypes = {
-  content: PropTypes.string.isRequired,
-};
 
 export default Subheading;

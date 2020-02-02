@@ -18,12 +18,26 @@ const Container = styled(Column)`
 const Header = () => (
   <Wrapper color="white">
     <Container>
-      <Heading content="Hi! I'm Sebastian. 👋" />
-      <Subheading content="I'm a front-end developer based in Pōneke, Aotearoa (Wellington, New Zealand)." />
+      <Heading>
+        Hi! I&apos;m Sebastian.
+        {' '}
+        <span role="img" aria-label="wave emoji">👋</span>
+        {' '}
+      </Heading>
+      <Subheading>I&apos;m a front-end developer based in Pōneke, Aotearoa (Wellington, New Zealand). </Subheading>
       <Buttons>
         <Button background="#f279f6" hoverColor="#002733" href="#about">About me</Button>
-        <Button background="#f279f6" hoverColor="#002733" href="#">Contact me</Button>
-        <Button background="#f279f6" hoverColor="#002733" href="https://github.com/sebknight">GitHub</Button>
+        <Button background="#f279f6" hoverColor="#002733" href="#about">Contact me</Button>
+        <Button
+          background="#f279f6"
+          hoverColor="#002733"
+          href="https://github.com/sebknight"
+          target="_blank"
+          title="GitHub link"
+          rel="noopener"
+        >
+GitHub
+        </Button>
       </Buttons>
     </Container>
   </Wrapper>
