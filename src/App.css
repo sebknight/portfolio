@@ -36,10 +36,14 @@
     transform: rotate(360deg);
   }
 } */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Sans&display=swap');
 
-body { 
-  background: #002733;
-  min-height: 100vh;
-  min-width: 100vw;
-  line-height: normal;
+body, html {
+  background: rgb(35,201,255);
+  background: linear-gradient(180deg, rgba(35,201,255,1) 0%, rgba(242,121,246,1) 69%); 
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-height: 100%;
+  width: 100%;
+  font-family: 'Noto Sans', sans-serif;
 }

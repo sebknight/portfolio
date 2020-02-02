@@ -2,15 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-// const Wrapper = styled.div`
-//   width: 100%;
-//   margin-top: 10px;
-// `
-
 const Text = styled.p`
-  color: white;
-  font-family: 'Helvetica', sans-serif;
   font-size: 16px;
+  text-align: left;
+  max-width: 60ch;
+  margin: 0 auto;
 
   @media(min-width: 768px) {
     font-size: 20px;
@@ -19,20 +15,18 @@ const Text = styled.p`
   @media(min-width: 1200px) {
     font-size: 24px;
   }
-`
+`;
 
-const Paragraph = props => {
+const Paragraph = (props) => {
   const { content } = props;
 
-  return (  
-    // <Wrapper>
-      <Text>{content}</Text>
-    // </Wrapper>
+  return (
+    <Text>{content}</Text>
   );
-}
+};
 
 Paragraph.propTypes = {
   content: PropTypes.string,
-}
+};
 
 export default Paragraph;

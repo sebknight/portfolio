@@ -1,11 +1,10 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
 const Item = styled.li`
-  color: white;
-  font-family: 'Helvetica', sans-serif;
   font-size: 16px;
+  text-align: left;
   margin-bottom: 0.5em;
 
   @media(min-width: 768px) {
@@ -18,15 +17,21 @@ const Item = styled.li`
 
   ::before {
     content: "♥ ";
-    color: #f279f6;
+    color: #23c9ff;
   }
-`
+`;
 
-const ListItem = props => {
+const ListItem = (props) => {
+  const { item } = props;
   return (
     <Item>
-      {props.item}
+      {item}
     </Item>
-  )}
+  );
+};
+
+ListItem.propTypes = {
+  item: PropTypes.string.isRequired,
+};
 
 export default ListItem;
