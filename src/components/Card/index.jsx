@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from '../Image';
 import Paragraph from '../Paragraph';
+import Button from '../Button';
 
 const Container = styled.div`
   display: flex;  
@@ -15,13 +16,14 @@ const Container = styled.div`
   border-radius: 10px;
 
   &:hover {
-    transition: 0.5s;
-    background: #002733;
-    color: white;
+    transition: 0.3s;
+    box-shadow: 5px 5px #23c8fe;
   }
 `;
 
 const Title = styled.h3`
+  background: white;  
+  border-radius: 5px;
   font-family: 'Noto Serif', serif;
   font-weight: bold;
   font-size: 24px;
@@ -37,14 +39,25 @@ const Title = styled.h3`
 `;
 
 const ImageContainer = styled.div`
-  padding-bottom: 25px;
+  padding: 25px 0 25px 0px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ButtonContainer = styled.div`
+  margin-top: 25px;
+`;
+
+const ContentContainer = styled.div`
+  background: white;
+  padding: 25px;
+  border-radius: 5px;
 `;
 
 const Card = (props) => {
   const {
-    height, src, width, content, title,
+    height, src, width, content, title, label, href,
   } = props;
 
   return (
@@ -53,7 +66,17 @@ const Card = (props) => {
       <ImageContainer>
         <Image height={height} src={src} width={width} />
       </ImageContainer>
-      <Paragraph>{content}</Paragraph>
+      <ContentContainer>
+        <Paragraph>{content}</Paragraph>
+      </ContentContainer>
+      <ButtonContainer>
+        <Button
+          href={href}
+          label={label}
+          target="_blank"
+          rel="noopener"
+        />
+      </ButtonContainer>
     </Container>
   );
 };

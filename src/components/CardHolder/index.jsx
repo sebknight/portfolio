@@ -9,7 +9,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(1, 1fr);
   margin-bottom: 25px;
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 50px;
   }
@@ -26,6 +26,8 @@ const CardHolder = (props) => {
       width={card.width}
       content={card.content}
       title={card.title}
+      label="Check it out"
+      href={card.href}
     />
   ));
 

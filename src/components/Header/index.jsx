@@ -7,12 +7,19 @@ import Subheading from '../Subheading';
 import Wrapper from '../Wrapper';
 
 const Buttons = styled.nav`
-  margin-left: -20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-items: space-evenly;
 `;
 
 const Container = styled(Column)`
   margin-top: 25px;
   text-align: left;
+`;
+
+const HeaderSubheading = styled(Subheading)`
+  text-shadow: 2px 2px #002733;
 `;
 
 const Header = () => (
@@ -24,10 +31,10 @@ const Header = () => (
         <span role="img" aria-label="wave emoji">👋</span>
         {' '}
       </Heading>
-      <Subheading>I&apos;m a front-end developer based in Pōneke, Aotearoa (Wellington, New Zealand). </Subheading>
+      <HeaderSubheading>I&apos;m a front-end developer based in Pōneke, Aotearoa (Wellington, New Zealand). </HeaderSubheading>
       <Buttons>
-        <Button background="#f279f6" hoverColor="#002733" href="#about">About me</Button>
-        <Button background="#f279f6" hoverColor="#002733" href="#about">Contact me</Button>
+        <Button background="#f279f6" hoverColor="#002733" href="#about" label="About me" />
+        <Button background="#f279f6" hoverColor="#002733" href="#about" label="Contact me" />
         <Button
           background="#f279f6"
           hoverColor="#002733"
@@ -35,9 +42,8 @@ const Header = () => (
           target="_blank"
           title="GitHub link"
           rel="noopener"
-        >
-GitHub
-        </Button>
+          label="GitHub"
+        />
       </Buttons>
     </Container>
   </Wrapper>

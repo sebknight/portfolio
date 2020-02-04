@@ -15,7 +15,7 @@ const About = () => (
     <Subheading>About me</Subheading>
     <Container>
       <Paragraph>
-        I currently work at BNZ Digital as a front-end developer.
+        I'm a web designer and developer with a strong understanding of UX principles and a focus on accessibility. I believe in approaching problems with empathy, resilience, and a sense of humour.
         <br />
         <br />
         If I&apos;m not building something, you can find me drawing, hanging out with animals,
