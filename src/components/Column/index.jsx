@@ -8,9 +8,9 @@ const Column = styled.div`
   justify-content: center;
   flex-flow: column wrap;
   height: auto;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2rem;
   border-radius: 5px;
 
   @media (min-width: 768px) {

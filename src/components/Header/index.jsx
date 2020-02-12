@@ -8,6 +8,7 @@ import Wrapper from '../Wrapper';
 const Buttons = styled.nav`
   display: flex;
   flex-flow: row wrap;
+  padding-bottom: 2rem;
 `;
 
 const Container = styled.section`

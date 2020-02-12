@@ -4,11 +4,18 @@ import styled from 'styled-components';
 import Card from '../Card';
 
 const Grid = styled.div`
-  display: grid;
-  grid-gap: 3rem;
-  grid-template-columns: repeat(1, 1fr);
-  margin-bottom: 25px;
-  justify-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  
+  @media (min-width: 768px) {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 25px;
+    justify-items: center;
+  }
 `;
 
 const CardHolder = (props) => {

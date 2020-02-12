@@ -52,8 +52,12 @@ const ButtonContainer = styled.div`
 
 const ContentContainer = styled.div`
   background: white;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 5px;
+  
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
 `;
 
 const Card = (props) => {
