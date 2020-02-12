@@ -8,6 +8,7 @@ const Grid = styled.div`
   grid-gap: 3rem;
   grid-template-columns: repeat(1, 1fr);
   margin-bottom: 25px;
+  justify-items: center;
 `;
 
 const CardHolder = (props) => {
