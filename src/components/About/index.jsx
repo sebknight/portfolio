@@ -11,11 +11,13 @@ const Container = styled.div`
 
 const About = () => (
   <Wrapper color="#002733">
-    <a name="about" href="#" />
+    <a name="about" aria-label="in-page anchor" href="#" />
     <Subheading>About me</Subheading>
     <Container>
       <Paragraph>
-        I'm a web designer and developer with a strong understanding of UX principles and a focus on accessibility. I believe in approaching problems with empathy, resilience, and a sense of humour.
+        I&apos;m a web designer and developer with a strong understanding of UX principles and a focus on accessibility. 
+        I believe in approaching problems with empathy, resilience, and a sense of humour.
+        While I&apos;m mostly a front-end developer, I also have some experience with back-end systems.
         <br />
         <br />
         If I&apos;m not building something, you can find me drawing, hanging out with animals,
@@ -23,14 +25,12 @@ const About = () => (
       </Paragraph>
       <br />
       <Paragraph>
-        Got a project? Drop me a line at sekm @ protonmail dot com, or contact me on
+        Got a project? Drop me a line at sebastian @ sebastianmaddox dot com, or contact me on
         {' '}
         <TextLink
           href="https://nz.linkedin.com/in/sebastian-maddox-ab213216b"
-          target="_blank"
-          rel="noopener"
         >
-        LinkedIn.
+          LinkedIn.
         </TextLink>
       </Paragraph>
     </Container>

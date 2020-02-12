@@ -6,77 +6,82 @@ import Paragraph from '../Paragraph';
 import Button from '../Button';
 
 const Container = styled.div`
-  display: flex;  
+  display: grid;  
+  grid-template-columns: 1;
+  grid-gap: 2rem;
   align-items: stretch;
-  flex-flow: column wrap;
-  background-color: #f279f6;
-  padding: 25px;
+  padding: 0rem;
   width: 100%;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 0px;
+  border: 2px dotted rgba(35, 201, 255, 1);
 
-  &:hover {
-    transition: 0.3s;
-    box-shadow: 5px 5px #23c8fe;
+  @media (min-width: 768px) {
+    &:hover {
+      transition: 0.3s;
+      box-shadow: 10px 10px #23c9ff;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
 const Title = styled.h3`
   background: white;  
+  font-size: 1.5rem;
+  font-weight: bold;
   border-radius: 5px;
   font-family: 'Noto Serif', serif;
-  font-weight: bold;
-  font-size: 24px;
   text-align: center;
-
-  @media(min-width: 768px) {
-    font-size: 28px;
-  }
-
-  @media(min-width: 1200px) {
-    font-size: 32px;
-  } 
-`;
-
-const ImageContainer = styled.div`
-  padding: 25px 0 25px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-bottom: 2rem;
 `;
 
 const ButtonContainer = styled.div`
-  margin-top: 25px;
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
 `;
 
 const ContentContainer = styled.div`
   background: white;
-  padding: 25px;
+  // display: flex;
+  // flex-flow: column wrap;
+  padding: 2rem;
   border-radius: 5px;
+  border-bottom: 2px dotted rgba(35, 201, 255, 1);
+
+
+  @media (min-width: 1200px) {
+    border-bottom: 0;
+    border-right: 2px dotted rgba(35, 201, 255, 1);
+  }
 `;
 
 const Card = (props) => {
   const {
-    height, src, width, content, title, label, href,
+    alt, height, src, width, content, title, labelA, labelB, hrefA, hrefB,
   } = props;
 
   return (
     <Container>
-      <Title>{title}</Title>
-      <ImageContainer>
-        <Image height={height} src={src} width={width} />
-      </ImageContainer>
       <ContentContainer>
+        <Title>{title}</Title>
         <Paragraph>{content}</Paragraph>
+        <ButtonContainer>
+          <Button
+            href={hrefA}
+            label={labelA}
+          />
+          <Button
+            href={hrefB}
+            label={labelB}
+          />
+        </ButtonContainer>
       </ContentContainer>
-      <ButtonContainer>
-        <Button
-          href={href}
-          label={label}
-          target="_blank"
-          rel="noopener"
-        />
-      </ButtonContainer>
+      <Image alt={alt} height={height} src={src} width={width} />
     </Container>
   );
 };
@@ -84,6 +89,10 @@ const Card = (props) => {
 Card.propTypes = {
   content: PropTypes.string,
   height: PropTypes.string.isRequired,
+  hrefA: PropTypes.string,
+  hrefB: PropTypes.string,
+  labelA: PropTypes.string,
+  labelB: PropTypes.string,
   src: PropTypes.string.isRequired,
   title: PropTypes.string,
   width: PropTypes.string.isRequired,

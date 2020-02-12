@@ -6,4 +6,5 @@ const Wrapper = styled.section`
   padding: 0;
   color: ${(props) => props.color};
 `;
+
 export default Wrapper;
