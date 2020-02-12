@@ -7,6 +7,7 @@ import Wrapper from '../Wrapper';
 
 const Container = styled.div`
   display: inline;
+  padding: 2rem;
 `;
 
 const About = () => (
