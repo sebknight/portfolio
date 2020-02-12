@@ -10,7 +10,7 @@ const Column = styled.div`
   height: auto;
   width: 95%;
   margin: 0 auto;
-  padding: 0 25px 25px 25px;
+  padding: 0 2rem;
   border-radius: 5px;
 
   @media (min-width: 768px) {

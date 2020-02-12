@@ -17,7 +17,6 @@ const About = () => (
       <Paragraph>
         I&apos;m a web designer and developer with a strong understanding of UX principles and a focus on accessibility. 
         I believe in approaching problems with empathy, resilience, and a sense of humour.
-        While I&apos;m mostly a front-end developer, I also have some experience with back-end systems.
         <br />
         <br />
         If I&apos;m not building something, you can find me drawing, hanging out with animals,

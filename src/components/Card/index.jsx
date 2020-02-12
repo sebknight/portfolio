@@ -23,7 +23,7 @@ const Container = styled.div`
     }
   }
   
-  @media (min-width: 1200px) {
+  @media (min-width: 1600px) {
     grid-template-columns: repeat(2, 1fr);
   }
 `;
@@ -41,23 +41,19 @@ const Title = styled.h3`
 const ButtonContainer = styled.div`
   margin-top: 2rem;
   display: flex;
-  flex-flow: column wrap;
   justify-content: space-around;
+  flex-flow: column wrap;
+  
+  @media (min-width: 768px) {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 `;
 
 const ContentContainer = styled.div`
   background: white;
-  // display: flex;
-  // flex-flow: column wrap;
   padding: 2rem;
   border-radius: 5px;
-  border-bottom: 2px dotted rgba(35, 201, 255, 1);
-
-
-  @media (min-width: 1200px) {
-    border-bottom: 0;
-    border-right: 2px dotted rgba(35, 201, 255, 1);
-  }
 `;
 
 const Card = (props) => {
