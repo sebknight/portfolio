@@ -68,6 +68,7 @@ const Card = (props) => {
 
   return (
     <Container>
+      <Image alt={alt} height={height} src={src} width={width} />
       <ContentContainer>
         <Title>{title}</Title>
         <Paragraph>{content}</Paragraph>
@@ -82,7 +83,6 @@ const Card = (props) => {
           />
         </ButtonContainer>
       </ContentContainer>
-      <Image alt={alt} height={height} src={src} width={width} />
     </Container>
   );
 };
