@@ -4,6 +4,7 @@ const TextLink = styled.a`
   font-size: inherit;
   color: inherit;
   text-decoration: underline 1px;
+  text-decoration-line: underline;
   
   &:hover {
     background: #002733;
