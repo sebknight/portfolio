@@ -4,7 +4,7 @@ const Subheading = styled.h2`
   font-family: 'Noto Serif', serif;
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 20px 0 20px 0;
+  margin: 10px 0 30px 0;
 
   @media(min-width: 768px) {
     margin: 40px 0 40px 0;
