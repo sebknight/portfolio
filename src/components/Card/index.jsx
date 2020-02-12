@@ -12,11 +12,12 @@ const Container = styled.div`
   align-items: stretch;
   padding: 0rem;
   width: 100%;
-  margin: 0 auto;
+  margin-bottom: 2rem;
   border-radius: 0px;
   border: 2px dotted rgba(35, 201, 255, 1);
 
   @media (min-width: 768px) {
+    margin: 0 auto;
     &:hover {
       transition: 0.3s;
       box-shadow: 10px 10px #23c9ff;
