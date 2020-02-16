@@ -54,7 +54,8 @@ const ButtonContainer = styled.div`
 
 const ContentContainer = styled.div`
   background: white;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   border-radius: 5px;
   
   @media (min-width: 768px) {
