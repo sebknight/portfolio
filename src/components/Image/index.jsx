@@ -12,6 +12,7 @@ const Img = styled.img`
   margin: 0 auto;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 `;
 
 const Image = (props) => {

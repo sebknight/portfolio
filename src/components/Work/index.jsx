@@ -41,11 +41,12 @@ const Work = () => {
     },
     {
       id: 3,
+      alt: 'IMac screen showing the Fetch app',
       src: fetch,
       height,
       width,
       content:
-      'A fun little app utilising the Fetch, Dog, and Wikipedia APIs. Click the button to get a random dog image, and you will receive a snippet of information about the breed. Done entirely in vanilla JS, and needed a surprising amount of engineering due to several edge cases. NB: This is not supported by Internet Explorer or Facebook\'s in-app browser.',
+      'A fun little app utilising the Fetch, Dog, and Wikipedia APIs. Click the button to get a random dog image, and you will receive a snippet of information about the breed. Done entirely in vanilla JS, and needed a surprising amount of engineering due to several edge cases.',
       title: 'Fetch!',
       hrefA: 'https://sebknight.github.io/fetch/',
       labelA: 'View live site',
