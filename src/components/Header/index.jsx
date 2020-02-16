@@ -24,9 +24,11 @@ const Container = styled.section`
 
 const Content = styled.div`
   width: 80%;
+  padding-top: 1rem;
 
   @media (min-width: 768px) {
     width: 60%;
+
   }
 `;
 
