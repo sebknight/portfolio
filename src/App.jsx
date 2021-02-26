@@ -5,7 +5,7 @@ import Divider from './components/Divider';
 import Header from './components/Header';
 import Work from './components/Work';
 import Footer from './components/Footer';
-import { ApolloProvider, ApolloClient, InMemoryCache, useQuery, gql } from '@apollo/client';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import './App.css';
 
 const client = new ApolloClient({
@@ -13,37 +13,12 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-const EXCHANGE_RATES = gql`
-  query GetExchangeRates {
-    rates(currency: "USD") {
-      currency
-      rate
-    }
-  }
-`;
-
-function ExchangeRates() {
-  const { loading, error, data } = useQuery(EXCHANGE_RATES);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
-
-  return data.rates.map(({ currency, rate }) => (
-    <div key={currency}>
-      <p>
-        {currency}: {rate}
-      </p>
-    </div>
-  ));
-}
-
 function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
         <Header />
         <Column background="white">
-          <ExchangeRates />
           <Work />
           <Divider />
           <About />
