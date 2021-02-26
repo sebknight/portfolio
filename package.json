@@ -9,22 +9,23 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "destyle.css": "^1.0.13",
-    "gatsby": "^2.32.8",
-    "graphql": "^15.3.0",
     "prop-types": "^15.7.2",
     "ramda": "^0.26.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^4.0.3",
     "redux": "^4.0.5",
     "render-if": "^0.1.1",
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,6 +50,7 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "gatsby": "^2.32.8",
     "redux-devtools": "^3.6.0"
   }
 }
