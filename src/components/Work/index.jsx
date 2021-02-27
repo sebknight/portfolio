@@ -2,10 +2,11 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Subheading from '../Subheading';
 import Wrapper from '../Wrapper';
-import Paragraph from '../Paragraph';
+import Text from '../Text';
 import styled from 'styled-components';
 import TextLink from '../TextLink';
-import { path, pipe, map, values } from 'ramda';
+import Image from '../Image';
+import { map, where } from 'ramda';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 import { INLINES } from '@contentful/rich-text-types';
 
@@ -30,20 +31,21 @@ const renderOptions = {
   },
 };
 
-
-
-
 const mapProjects = map(project => renderProject(project.node));
 
 const renderProject = (project) => 
-    <>
+    <div key={project.title}>
+        <Image
+        alt={project.image.description}
+        src={project.image.fluid.src}
+      />
       <Title>
         {project.title}
       </Title>
-      <Paragraph>
+      <Text>
         {renderRichText(project.description, renderOptions)}
-      </Paragraph>
-    </> 
+      </Text>
+    </div> 
 
 
 const Work = () => {
@@ -56,6 +58,13 @@ const Work = () => {
             description {
               raw
             }
+            image: image {
+              title
+              description
+              fluid (maxWidth: 1000) {
+                src
+              }
+            }
           }
         }
       }
@@ -65,8 +74,8 @@ const Work = () => {
   return (
     <Wrapper color="#002733">
       <Subheading>Projects</Subheading>
+      {console.log(data)}
       {mapProjects(data.allContentfulProject.edges)}
-      {console.log(data.allContentfulProject)}
     </Wrapper>
   );
 };

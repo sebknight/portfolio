@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Subheading from '../Subheading';
-import Paragraph from '../Paragraph';
+import Text from '../Text';
 import TextLink from '../TextLink';
 import Wrapper from '../Wrapper';
 
@@ -15,16 +15,16 @@ const About = () => (
     <a name="about" aria-label="in-page anchor" href="#" />
     <Subheading>About me</Subheading>
     <Container>
-      <Paragraph>
+      <Text>
         I&apos;m a web designer and developer with a strong understanding of UX principles and a focus on accessibility. 
         I believe in approaching problems with empathy, resilience, and a sense of humour.
         <br />
         <br />
         If I&apos;m not building something, you can find me drawing, hanging out with animals,
         or enjoying Wellington&apos;s vibrant food culture.
-      </Paragraph>
+      </Text>
       <br />
-      <Paragraph>
+      <Text>
         Got a project? Drop me a line at sebastian @ sebastianmaddox dot com, or contact me on
         {' '}
         <TextLink
@@ -32,7 +32,7 @@ const About = () => (
         >
           LinkedIn.
         </TextLink>
-      </Paragraph>
+      </Text>
     </Container>
   </Wrapper>
 );

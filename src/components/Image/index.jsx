@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -22,16 +23,16 @@ const Image = (props) => {
 
   return (
     <ImageContainer height={height} width={width}>
-      <Img alt={alt} src={src} />
+      <Img src={src} />
     </ImageContainer>
   );
 };
 
-Image.propTypes = {
-  alt: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
-  width: PropTypes.string.isRequired,
-};
+// Image.propTypes = {
+//   alt: PropTypes.string.isRequired,
+//   height: PropTypes.string.isRequired,
+//   src: PropTypes.string.isRequired,
+//   width: PropTypes.string.isRequired,
+// };
 
 export default Image;

@@ -24,8 +24,6 @@ module.exports = {
       options: {
         spaceId: spaceId,
         accessToken: accessToken,
-        host: 'cdn.contentful.com',
-        downloadLocal: true
       },
     },
   ],
