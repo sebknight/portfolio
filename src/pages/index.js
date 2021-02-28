@@ -1,7 +1,6 @@
 import React from "react";
 import About from "../components/About";
 import Column from "../components/Column";
-import Divider from "../components/Divider";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
