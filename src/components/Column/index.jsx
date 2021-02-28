@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Column = styled.div`
   display: flex;
@@ -14,8 +14,8 @@ const Column = styled.div`
   border-radius: 5px;
 
   @media (min-width: 768px) {
-    padding: 0 50px 50px 50px; 
-    width: 80%
+    padding: 0 50px 50px 50px;
+    width: 80%;
   }
 `;
 

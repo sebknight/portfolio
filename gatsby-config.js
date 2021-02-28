@@ -26,5 +26,6 @@ module.exports = {
         accessToken: accessToken,
       },
     },
+    `gatsby-plugin-sharp`,
   ],
 }

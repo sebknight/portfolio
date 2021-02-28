@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from "styled-components";
 
 const TextLink = styled.a`
   font-size: inherit;
-  color: inherit;
+  color: #2fc4fe;
   text-decoration: underline 1px;
   text-decoration-line: underline;
-  
+
   &:hover {
     background: #002733;
     color: white;
@@ -15,6 +15,12 @@ const TextLink = styled.a`
     background: #002733;
     color: white;
   }
+
+  ${(props) =>
+    props.footer &&
+    css`
+      color: inherit;
+    `}
 `;
 
 export default TextLink;

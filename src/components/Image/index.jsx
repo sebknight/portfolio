@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
-import styled from 'styled-components';
+import PropTypes from "prop-types";
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
+import styled from "styled-components";
 
 const ImageContainer = styled.div`
   height: ${(props) => props.height};
   width: ${(props) => props.width};
-  `;
+`;
 
 const Img = styled.img`
   display: block;
@@ -17,9 +17,7 @@ const Img = styled.img`
 `;
 
 const Image = (props) => {
-  const {
-    alt, height, src, width,
-  } = props;
+  const { src } = props;
 
   return (
     <ImageContainer height={height} width={width}>

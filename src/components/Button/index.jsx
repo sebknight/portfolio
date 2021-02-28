@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled.a`
   border-radius: 5px;
@@ -12,6 +12,7 @@ const Container = styled.a`
   margin: 5px;
   font-weight: bold;
   text-transform: lowercase;
+  text-decoration-line: none;
   width: 11rem;
 
   @media(min-width: 768px) {
@@ -39,19 +40,12 @@ const Container = styled.a`
 const Button = (props) => {
   const { href, label } = props;
 
-  return (
-    <Container
-      href={href}
-    >
-      {label}
-    </Container>
-  );
+  return <Container href={href}>{label}</Container>;
 };
-
 
 export default Button;
 
 Button.propTypes = {
   href: PropTypes.string,
   label: PropTypes.string,
-}
+};

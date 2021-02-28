@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from '../Button';
-import Heading from '../Heading';
-import Subheading from '../Subheading';
-import Wrapper from '../Wrapper';
+import React from "react";
+import styled from "styled-components";
+import Button from "../Button";
+import Heading from "../Heading";
+import Subheading from "../Subheading";
+import Wrapper from "../Wrapper";
 
 const Buttons = styled.nav`
   display: flex;
@@ -19,7 +19,11 @@ const Container = styled.section`
   justify-content: center;
   flex-flow: column wrap;
   min-height: 85vh;
-  background: linear-gradient(180deg, rgba(35, 201, 255, 1) 0%, rgba(242,121,246,1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(35, 201, 255, 1) 0%,
+    rgba(242, 121, 246, 1) 100%
+  );
 `;
 
 const Content = styled.div`
@@ -28,7 +32,6 @@ const Content = styled.div`
 
   @media (min-width: 768px) {
     width: 60%;
-
   }
 `;
 
@@ -41,14 +44,23 @@ const Header = () => (
     <Container>
       <Content>
         <Heading>
-          Hi! I&apos;m Sebastian.
-          {' '}
-          <span role="img" aria-label="wave emoji">👋</span>
-          {' '}
+          Hi! I&apos;m Sebastian.{" "}
+          <span role="img" aria-label="wave emoji">
+            👋
+          </span>{" "}
         </Heading>
-        <ShadowedSubheading>I&apos;m a front-end developer based in Pōneke, Aotearoa (Wellington, New Zealand). </ShadowedSubheading>
+        <ShadowedSubheading>
+          I&apos;m a front-end developer based in Pōneke, Aotearoa (Wellington,
+          New Zealand).{" "}
+        </ShadowedSubheading>
         <Buttons>
-          <Button background="#f279f6" hoverColor="#002733" href="#about" label="about me" aria-labelledby="in-page link" />
+          <Button
+            background="#f279f6"
+            hoverColor="#002733"
+            href="#about"
+            label="about me"
+            aria-labelledby="in-page link"
+          />
           <Button
             background="#f279f6"
             hoverColor="#002733"

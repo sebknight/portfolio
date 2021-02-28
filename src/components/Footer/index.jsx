@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import TextLink from '../TextLink';
+import React from "react";
+import styled from "styled-components";
+import TextLink from "../TextLink";
 
 const Subtext = styled.p`
   font-size: 16px;
@@ -16,22 +16,20 @@ const Container = styled.div`
   color: #002733;
 `;
 
-
 const Footer = () => (
   <Container>
     <Subtext>
-      © Sebastian Maddox 2020.
-      {' '}
+      © Sebastian Maddox 2020.{" "}
       <TextLink
         href="https://github.com/sebknight/portfolio"
         target="_blank"
         rel="noopener"
+        footer
       >
         View source on GitHub.
       </TextLink>
     </Subtext>
   </Container>
-
 );
 
 export default Footer;

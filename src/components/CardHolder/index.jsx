@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
-import Card from '../Card';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import Card from "../Card";
 
 const Grid = styled.div`
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  
+
   @media (min-width: 768px) {
     display: grid;
     grid-gap: 3rem;
@@ -36,11 +36,7 @@ const CardHolder = (props) => {
     />
   ));
 
-  return (
-    <Grid>
-      {mapCards}
-    </Grid>
-  );
+  return <Grid>{mapCards}</Grid>;
 };
 
 CardHolder.propTypes = {
