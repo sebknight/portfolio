@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
-import Image from '../Image';
-import Paragraph from '../Paragraph';
-import Button from '../Button';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import Image from "../Image";
+import Paragraph from "../Paragraph";
+import Button from "../Button";
 
 const Container = styled.div`
-  display: grid;  
+  display: grid;
   grid-template-columns: 1;
   grid-gap: 2rem;
   align-items: stretch;
@@ -15,7 +15,7 @@ const Container = styled.div`
   margin-bottom: 2rem;
   border-bottom: 2px dotted rgba(35, 201, 255, 1);
   border-radius: 0px;
-  
+
   @media (min-width: 768px) {
     border: 2px dotted rgba(35, 201, 255, 1);
     margin: 0 auto;
@@ -24,18 +24,18 @@ const Container = styled.div`
       box-shadow: 10px 10px #23c9ff;
     }
   }
-  
+
   @media (min-width: 1600px) {
     grid-template-columns: repeat(2, 1fr);
   }
 `;
 
 const Title = styled.h3`
-  background: white;  
+  background: white;
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 5px;
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
   text-align: center;
   padding-bottom: 2rem;
 `;
@@ -45,7 +45,7 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-around;
   flex-flow: column wrap;
-  
+
   @media (min-width: 768px) {
     flex-flow: row wrap;
     justify-content: center;
@@ -57,7 +57,7 @@ const ContentContainer = styled.div`
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 5px;
-  
+
   @media (min-width: 768px) {
     padding: 2rem;
   }
@@ -65,7 +65,16 @@ const ContentContainer = styled.div`
 
 const Card = (props) => {
   const {
-    alt, height, src, width, content, title, labelA, labelB, hrefA, hrefB,
+    alt,
+    height,
+    src,
+    width,
+    content,
+    title,
+    labelA,
+    labelB,
+    hrefA,
+    hrefB,
   } = props;
 
   return (
@@ -75,14 +84,8 @@ const Card = (props) => {
         <Title>{title}</Title>
         <Paragraph>{content}</Paragraph>
         <ButtonContainer>
-          <Button
-            href={hrefA}
-            label={labelA}
-          />
-          <Button
-            href={hrefB}
-            label={labelB}
-          />
+          <Button href={hrefA} label={labelA} />
+          <Button href={hrefB} label={labelB} />
         </ButtonContainer>
       </ContentContainer>
     </Container>
@@ -100,6 +103,5 @@ Card.propTypes = {
   title: PropTypes.string,
   width: PropTypes.string.isRequired,
 };
-
 
 export default Card;
