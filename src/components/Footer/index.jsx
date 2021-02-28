@@ -10,7 +10,6 @@ const Subtext = styled.p`
 const Container = styled.div`
   width: 100%;
   background-color: #f279f6;
-  padding: 10px;
   text-align: center;
   margin: 0 auto;
   color: #002733;
@@ -19,7 +18,7 @@ const Container = styled.div`
 const Footer = () => (
   <Container>
     <Subtext>
-      © Sebastian Maddox 2020.{" "}
+      © Sebastian Maddox 2021.{" "} 
       <TextLink
         href="https://github.com/sebknight/portfolio"
         target="_blank"

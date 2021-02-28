@@ -3,7 +3,7 @@ import About from "../components/About";
 import Column from "../components/Column";
 import Divider from "../components/Divider";
 import Header from "../components/Header";
-import Work from "../components/Work";
+import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import "../App.css";
 
@@ -12,8 +12,7 @@ export default function Home() {
     <div className="App">
       <Header />
       <Column background="white">
-        <Work />
-        <Divider />
+        <Projects />
         <About />
       </Column>
       <Footer />

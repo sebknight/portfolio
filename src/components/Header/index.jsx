@@ -1,9 +1,13 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 import Button from "../Button";
 import Heading from "../Heading";
 import Subheading from "../Subheading";
 import Wrapper from "../Wrapper";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { BLOCKS } from "@contentful/rich-text-types";
+import { map } from "ramda";
 
 const Buttons = styled.nav`
   display: flex;
@@ -18,7 +22,7 @@ const Container = styled.section`
   align-items: center;
   justify-content: center;
   flex-flow: column wrap;
-  min-height: 85vh;
+  min-height: 90vh;
   background: linear-gradient(
     180deg,
     rgba(35, 201, 255, 1) 0%,
@@ -39,39 +43,60 @@ const ShadowedSubheading = styled(Subheading)`
   text-shadow: 2px 2px #002733;
 `;
 
-const Header = () => (
-  <Wrapper color="white">
-    <Container>
-      <Content>
-        <Heading>
-          Hi! I&apos;m Sebastian.{" "}
-          <span role="img" aria-label="wave emoji">
-            👋
-          </span>{" "}
-        </Heading>
-        <ShadowedSubheading>
-          I&apos;m a front-end developer based in Pōneke, Aotearoa (Wellington,
-          New Zealand).{" "}
-        </ShadowedSubheading>
-        <Buttons>
-          <Button
-            background="#f279f6"
-            hoverColor="#002733"
-            href="#about"
-            label="about me"
-            aria-labelledby="in-page link"
-          />
-          <Button
-            background="#f279f6"
-            hoverColor="#002733"
-            href="https://github.com/sebknight"
-            title="GitHub link"
-            label="GitHub"
-          />
-        </Buttons>
-      </Content>
-    </Container>
-  </Wrapper>
-);
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      contentfulHeader {
+        heading {
+          raw
+        }
+        subheading 
+        links {
+          githubLink
+          githubLabel
+          linkedinLink
+          linkedinLabel
+        }
+      }
+    } 
+  `);
+
+  const renderOptions = {
+    renderNode: {
+      [BLOCKS.EMBEDDED_ASSET]: children => 
+        <span role="img" aria-label="wave emoji">{children}</span>
+    },
+  };
+
+  return (
+    <Wrapper color="white">
+      <Container>
+        <Content>
+          <Heading>
+            {renderRichText(data.contentfulHeader.heading, renderOptions)}
+          </Heading>
+          <ShadowedSubheading>
+            {data.contentfulHeader.subheading}
+          </ShadowedSubheading>
+          <Buttons>
+            <Button
+              href="#about"
+              label="about me"
+              aria-labelledby="in-page link"
+            />
+            <Button
+              href={data.contentfulHeader.links.githubLink}
+              label={data.contentfulHeader.links.githubLabel}
+            />
+            <Button
+              href={data.contentfulHeader.links.linkedinLink}
+              label={data.contentfulHeader.links.linkedinLabel}
+            />
+          </Buttons>
+        </Content>
+      </Container>
+    </Wrapper>
+  )
+};
 
 export default Header;
