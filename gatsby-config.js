@@ -27,5 +27,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify`,
   ],
+  siteMetadata: {
+    title: `Sebastian Maddox | Developer`,
+    description: `Sebastian's development portfolio site.`,
+    author: `Sebastian Maddox`
+  }
 }
