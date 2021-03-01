@@ -8,14 +8,13 @@ const Column = styled.div`
   justify-content: center;
   flex-flow: column wrap;
   height: auto;
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 1rem;
   border-radius: 5px;
 
   @media (min-width: 768px) {
-    padding: 0 50px 50px 50px;
-    width: 80%;
+    padding: 0 0.5rem;
   }
 `;
 

@@ -7,20 +7,20 @@ const Container = styled.a`
   border: solid 2px #002733;
   background-color: transparent;
   color: #002733;
-  padding: 10px;
+  padding: 0.5rem 1rem;
+  margin: 0.75rem 0.75rem 0.75rem 0;
   text-align: center;
-  margin: 5px;
   font-weight: bold;
   text-transform: lowercase;
   text-decoration-line: none;
-  width: 11rem;
+  // width: 12rem;
 
   @media(min-width: 768px) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   @media(min-width: 1200px) {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   
   &:hover {

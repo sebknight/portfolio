@@ -28,6 +28,7 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-styled-components`,
   ],
   siteMetadata: {
     title: `Sebastian Maddox | Developer`,

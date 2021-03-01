@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Text = styled.p`
+const Text = styled.div`
   text-align: left;
   max-width: 60ch;
   margin: 0 auto;
