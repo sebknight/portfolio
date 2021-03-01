@@ -12,6 +12,27 @@ import { map } from "ramda";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { INLINES } from "@contentful/rich-text-types";
 
+const Container = styled.div`
+  margin: 0 10px;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 1rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
+const ImgContainer = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
 const Title = styled.h3`
   background: white;
   font-size: 1.5rem;
@@ -19,18 +40,6 @@ const Title = styled.h3`
   border-radius: 5px;
   font-family: "Noto Serif", serif;
   text-align: center;
-  padding-bottom: 2rem;
-`;
-
-const Container = styled.div`
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-`;
-
-const ButtonContainer = styled.div`
-  margin: 0 auto;
 `;
 
 const renderOptions = {
@@ -45,7 +54,9 @@ const renderOptions = {
 
 const renderProject = (project) => (
   <Container key={project.title}>
-    <Img fluid={project.image.fluid} alt={project.image.description} />
+    <ImgContainer>
+      <Img fluid={project.image.fluid} alt={project.image.description} />
+    </ImgContainer>
     <Title>{project.title}</Title>
     <Text>{renderRichText(project.description, renderOptions)}</Text>
     <ButtonContainer>
@@ -78,7 +89,7 @@ const Projects = () => {
             image: image {
               title
               description
-              fluid {
+              fluid(maxWidth: 600) {
                 ...GatsbyContentfulFluid
               }
             }

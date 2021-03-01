@@ -11,8 +11,12 @@ import { map } from "ramda";
 
 const Buttons = styled.nav`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   padding-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 const Container = styled.section`

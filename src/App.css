@@ -4,9 +4,9 @@ body, html {
   /* background: rgba(242,121,246,1); */
   box-sizing: border-box;
   margin: 0 auto;
+  padding: 0;
   min-height: 100%;
   width: 100%;
-  overflow-x: hidden;
   font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
 
